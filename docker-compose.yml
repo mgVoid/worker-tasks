@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  konkurenta:
+    build: .
+    volumes:
+      - ./:/usr/src/app
+    container_name: konkurenta
+    env_file:
+      - .env
+    command: npm run dev
